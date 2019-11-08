@@ -1,21 +1,20 @@
 <template>
   <div id="app">
-      <router-view></router-view>
-    <Header msg="Welcome to Your Vue.js App"/>
+    <Header msg="Welcome to Your Vue.js App" />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Header from './components/layouts/Header.vue'
+import Header from "./components/layouts/Header.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Header
   }
-}
+};
 </script>
 
 <style>
-
 </style>
