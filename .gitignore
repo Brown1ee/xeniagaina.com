@@ -20,6 +20,7 @@ yarn-error.log*
 *.sln
 *.sw?
 /public
+/src
 babel.config.js
 package-lock.json
 package.json
