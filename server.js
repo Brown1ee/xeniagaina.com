@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 
 app.post("/send-mail", (req, res) => {
   const { firstName, email, lastName, phone, description } = req.body;
-  console.log("reqqq", firstName);
   // Send the email
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -26,7 +25,6 @@ app.post("/send-mail", (req, res) => {
     text: `${phone} ${description}`
   };
 
-  return res.status(200).send("pidr");
   transporter.sendMail(mailOptions, function(err) {
     if (err) {
       return res.status(500).send({ msg: err.message });
